@@ -1,0 +1,46 @@
+/** Clothing Store:
+Shirts (10)
+Shorts (8)
+Jackets (8)
+Pants (15)
+Sweaters (9)
+Sweat Pants (6)
+Tank Tops (5)
+Hoodies (9)
+Joggers (5)
+Polos (11)
+Slacks (10)
+Jeans (13)
+T-Shirts (12)
+Button Ups (10)
+Pullovers (8)
+**/
+
+-- Create a clothing store database 
+
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, material TEXT)
+
+;INSERT INTO clothes VALUES (1, "Shirts", 10, 15.99, "cotton");
+INSERT INTO clothes VALUES ( 2, "Shorts", 8, 12.99, "polyester");
+INSERT INTO clothes VALUES ( 3, "Jackets", 8, 19.99, "cotton");
+INSERT INTO clothes VALUES (4, "Pants", 15, 29.99, "polyester");
+INSERT INTO clothes VALUES (5, "sweaters", 9, 15.99, "cotton");
+INSERT INTO clothes VALUES (6, "sweat pants", 6, 18.99, "cotton");
+INSERT INTO clothes VALUES (7, "tank tops", 5, 5.99, "cotton");
+INSERT INTO clothes VALUES (8, "hoodies", 9, 29.99, "polyester");
+INSERT INTO clothes VALUES (9, "joggers", 5, 20.99, "cotton");
+INSERT INTO clothes VALUES (10, "polos", 11, 15.99, "cotton");
+INSERT INTO clothes VALUES (11, "slacks", 10, 29.99, "polyester");
+INSERT INTO  clothes VALUES (12, "jeans", 13, 30.99, "cotton");
+INSERT INTO clothes VALUES ( 13, "t-shirts", 12, 15.99, "polyester");
+INSERT INTO clothes VALUES (14, "button ups", 10, 19.99, "cotton");
+INSERT INTO clothes VALUES (15, "Pullovers", 8,19.99, "cotton");
+
+--display the database ordered by price. 
+SELECT * FROM clothes
+ORDER BY price desc; 
+
+
+--Show items that cost more than 15.99 and order them by material
+
+SELECT * FROM clothes WHERE price > 15.99 ORDER BY material
