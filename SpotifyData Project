@@ -1,0 +1,43 @@
+# For this project, I downloaded Spotify data from Kaggle.
+# Then I created a table to insert Spotify data into.
+# Finally, I performed analytics on the data using SQL. 
+
+#Creating the table: 
+CREATE TABLE BIT_DB.Spotifydata (
+id integer PRIMARY KEY,
+artist_name varchar NOT NULL,
+track_name varchar NOT NULL,
+track_id varchar NOT NULL,
+popularity integer NOT NULL,
+danceability decimal(4,3) NOT NULL,
+energy decimal(4,3) NOT NULL,
+key integer NOT NULL,
+loudness decimal(5,3) NOT NULL,
+mode integer NOT NULL,
+speechiness decimal(5,4) NOT NULL,
+acousticness decimal(6,5) NOT NULL,
+instrumentalness text NOT NULL,
+liveness decimal(5,4) NOT NULL,
+valence decimal(4,3) NOT NULL,
+tempo decimal(6,3) NOT NULL,
+duration_ms integer NOT NULL,
+time_signature integer NOT NULL 
+)
+
+#Then I inserted the Spotify Data .csv into the table.
+
+#Next, I explored the data using the following SQL. 
+
+#First i determined WHAT ARTIST HAD A SONG THAT LASTED MORE THAN 250000ms?
+
+SELECT artist_name,duration_ms
+FROM DATASE.Spotifydata
+GROUP BY artist_name
+HAVING duration_ms> 250000
+
+#Then I looked into WHAT SONGS HAD A TEMPO BETWEEN 100-150BPM?
+
+SELECT track_name
+FROM DATASE.spotifydata
+WHERE tempo BETWEEN 100 and 150
+
