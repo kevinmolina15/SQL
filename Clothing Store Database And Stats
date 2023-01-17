@@ -43,4 +43,7 @@ ORDER BY price desc;
 
 --Show items that cost more than 15.99 and order them by material
 
-SELECT * FROM clothes WHERE price > 15.99 ORDER BY material
+SELECT * FROM clothes 
+WHERE price > 15.99 ORDER BY material
+
+
